@@ -231,29 +231,295 @@
             justify-content: space-between;
             padding-left: 15px;
         }
-        .form-email input{
-            border-color: #50B6F5;
-            border-style: solid;
-            border-radius: 5px;
-            padding: 10px 20px 10px 25px;
-            background-image: url('../Proyecto_web_Tomorrowland/Imágenes/correo.jfif');
-            background-size: 17px 15px;
+        .burguer-button{
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.1);
+            display: none;
+            line-height: 40px;
+            text-align: center;
+            position: fixed;
+            z-index:4;
+            left: 5px;
+            top: 5px;
+            color: transparent;
+            background-image: url(./Iconos/menu_g.png);
             background-repeat: no-repeat;
-            background-position-y: center;
-            background-position-x: 5px;
         }
-        .form-email button{
-            margin-top: 10px;
-            background: transparent;
-            color: white;
-            padding: 10px 0;
-            border-radius: 5px;
-            width: 100px;
-            margin-top: 10px;
-            /*margin: 10px auto;*/
+        @media screen and (max-width: 1562px){
+            body {
+                margin: 0 60px;
+            }
+            .event img{
+                width: 100%;
+            }
         }
-        .form-email h3{
-            font-family: 'Source Sans Pro', sans-serif;
+
+        @media screen and (max-width: 1440px){
+            
+        }
+        @media screen and (max-width: 1400px){
+            .header a {
+                font-size: 1.2em;
+                padding: 0 20px;
+            }
+            .event {
+                width: auto;
+                flex-shrink: initial;
+            }
+        }
+        @media screen and (max-width: 1240px){
+            .header a {
+                /*font-size: 0.95em;*/
+                padding: 0 12px;
+            }
+        }
+        @media screen and (max-width: 1124px){
+            
+            h1 strong{
+                font-size: 1em;
+            }
+            h1 strong1{
+                font-size: 1em;
+            }
+            h1 strong2{
+                font-size: 1em;
+            }
+            h1 strong3{
+                font-size: 1em;
+            }
+            h1 strong4{
+                font-size: 0.8em;
+            }
+            h2 {
+                font-size: 31px;
+            }
+            p {
+                font-size: 0.95em;
+            }
+            .portfolio{
+                padding: 0;
+            }
+            .container{
+                padding: 10px 1em;
+            }
+
+            .hero{
+                height: auto;
+                justify-content: center;
+                /*position: relative;
+                overflow: hidden;
+                padding: 2em;*/
+            }
+            /*.hero-image {
+                position: absolute;        para que la imagen quede de fondo y texto superpuesto
+                z-index: 1;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+            }*/
+            .main_container {
+                justify-content: center;
+            }
+            h1{
+                font-size: 2em;
+                
+                /*z-index: 2;            superpone el texto encima de la imagen de .hero-image*/
+            }
+            .hero1 h1 {
+                margin-left: 0px;
+                text-align: center;
+                
+            }                
+            .event-list-title {
+                padding-left: 0;
+            }
+            .hero-imageContainer{
+                width: 100%;
+                text-align: center;
+            }
+            .hero-imageContainer img {
+                margin: 0;
+            }
+            .event{
+                width: auto;
+                flex-shrink: initial;
+            }
+            /*.event-image{
+                width: 100%;
+            }*/
+            .event img{
+                width: 100%;
+            }
+            .header {
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media screen and (max-width: 767px){
+            .burguer-button{
+                display: block;
+                cursor: pointer;
+            }
+            .hero, .hero1 {
+                height: auto;
+                /*position: relative;*/                   
+            }
+            .hero1 h1 {
+                
+                text-align: center;
+            }
+            
+            h1{
+                font-size: 2em;
+                /*z-index: 2;            superpone el texto encima de la imagen de .hero-image*/
+            }
+            .header{
+                display: block;
+                height: auto;
+            }
+            .header ol{
+                display: block;
+            }
+            .header ol li{
+                height: 50px;
+            }
+            .header a{
+                display: block;
+                justify-content: center;
+                height: 40px;
+                font-size: 2em;
+                text-decoration: underline;
+                margin-bottom: .5em;
+            }
+            .header .logo {
+                text-align: center;
+            }
+            .menu{
+                position: fixed;
+                background: rgb(255, 255, 255, 0.8);
+                z-index: 3;
+                top: 0;
+                left: -100vw;
+                width: 100vw;
+                height: 50vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 0.6s;
+            }
+            .menu.is-active{
+                left: 0;
+            }
+            .hero-imageContainer{
+                width: 100%;
+                text-align: center;
+            }
+            .event{
+                width: auto;
+                flex-shrink: initial;
+            }
+            /*.event-image{
+                width: 100%;
+            }*/
+            .event img{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 513px){
+            .contact {
+                height: 230px;
+                display: flow-root;
+            }
+            .social {
+                text-align: center;
+            }
+        @media screen and (max-width: 480px){
+            /*h1 {
+                font-size: 1em;
+            }*/
+            body {
+                margin: 0 20px;
+            }
+            .hero-imageContainer{
+                width: 100%;
+                text-align: center;
+            }
+            .hero-imageContainer img {
+                margin: 0;
+            }
+            .event-detail{
+                /*1em = 16px*/
+                /*margin: -40px 10px 10px 10px;*/
+                margin: -2em .5em .5em;
+                padding: 1em; 
+            }
+            .contact{
+                height: auto;
+                padding: 1.5em 0;
+                text-align: center;
+                display: block;
+            }
+            .form-email button{
+                margin: 1em auto;
+            }
+            .form-email h3{
+                margin-top: 0;
+            }
+            footer{
+                display: block;
+                text-align: center;
+                border: 1px solid transparent;
+            }
+            .container{
+                display: block;
+                text-align: center;
+                font-weight: bold;
+            }
+            .contact p {
+                margin-left: 0px;
+                display: flow-root;
+            }
+            .footer p {
+                margin-left: 0px;
+            }
+            .event-list-title-1 {
+                padding-left: 0px;
+            }
+        }
+        /*desktop first: empezar desde el MQ más grande*/
+        @media screen and (max-width: 320px){
+            h1{
+                font-size: 1.8em;
+                /*background: rgba(0,0,0,0.5)*/
+            }
+            .hero{
+                padding: 1em 1em;
+            }
+            h1 strong{
+                font-size: 0.9em;
+            }
+            h1 strong1{
+                font-size: 0.9em;
+            }
+            h1 strong2{
+                font-size: 0.9em;
+            }
+            h1 strong3{
+                font-size: 0.9em;
+            }
+            h1 strong4{
+                font-size: 0.8em;
+            }
+            h2 {
+                font-size: 25px;
+            }
+            p {
+                font-size: 0.85em;
+            }
         }
     </style>
 </head>
@@ -287,7 +553,7 @@
     <section class="hero">
         <div class="container">
             <h1>
-                <strong>Guía Tomorrowland</strong> <br/>desde <strong1>Colo</strong1><strong2>mb</strong2><strong3>ia</strong3>
+                <strong>Guía Tomorrowland</strong> <br/> <strong4>desde</strong4> <strong1>Colo</strong1><strong2>mb</strong2><strong3>ia</strong3>
             </h1>
             <!--<img class="hero-image" src="../Proyecto_web_Tomorrowland/Imágenes/Principal.jpg" width="260" height="300" alt="Principal">-->
         </div>
@@ -357,5 +623,29 @@
             </div>            
         </div>
     </footer>
+    <script>
+        /*console.log('amazing');*/
+        const ipad = window.matchMedia('screen and (max-width: 767px)');
+        const menu = document.querySelector('.menu')
+        /*console.log(menu);*/
+        const burguerButton = document.querySelector('#burguer-menu');
+        /*console.log(burguerButton);*/
+        ipad.addListener(validation)
+        function validation(event){
+            if(event.matches) {
+            burguerButton.addEventListener('click',hideShow)
+            } else {
+            burguerButton.removeEventListener('click',hideShow)
+            }
+        }
+        validation (ipad);
+        function hideShow(){
+            if(menu.classList.contains('is-active')){
+                menu.classList.remove('is-active');
+            } else{
+            menu.classList.add('is-active');
+            }
+        }
+    </script>
 </body>
 </html>
