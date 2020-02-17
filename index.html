@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destino Tomorrowland</title>
+    <link rel="icon" type="image/png" href="C:\Users\Usuario\Dropbox\Proyecto_web_Tomorrowland\Imágenes\tom_logo.png">
+    <style>
+        
+        .social i {
+            font-size: 50px;
+            color: black;
+            padding: 0 14px;
+            text-decoration: none; /*quitar el subrayado del enlace*/
+        }
+        body{
+            font-family: 'Source Sans Pro', sans-serif;
+            margin: 0 200px;
+            background: #B5959F;
+        }
+        header {
+            background: #B5959F;
+            color: black;
+            display: flex;
+            height: 80px;
+            align-items: center;
+            justify-content:space-between;
+            margin: 0;
+        }
+        ol,
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .header a{
+            color: #8E0038;
+            text-decoration: none; /*quitar el subrayado del enlace*/
+            font-size: 25px;
+        }
+        .header ol{
+            display: flex;
+        }
+        .header a{
+            padding: 0 40px;
+        }
+        .container{
+            /*border: 1px solid red;*/
+            width: 1500px;
+            margin: 0 auto;
+            display: inherit;
+            justify-content: inherit;
+            align-items: inherit;
+            height: auto;
+            flex-wrap: inherit;
+        }
+        .hero{
+            border: 2px solid #8E0038;
+            border-radius: 10px;
+            height: 600px;
+            background-image: url('../Proyecto_web_Tomorrowland/Imágenes/Principal_m.jpg');
+            background-color: #B5959F;
+            background-size:  900px 600px; /*tamaño de la imagen*/
+            background-repeat: no-repeat; /*quitar la secuencia de repetición de la imagen*/
+            background-position-x: right;
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+        }
+        /*.hero-image{
+            object-fit: cover;
+        }*/
+        h1{
+            font-size: 40px;       /*tamaño de la letra*/
+            line-height: 1.5em;    /*separación entre renglones*/
+            letter-spacing: -.2px;  /*espacio entre letras de una misma palabra*/
+            color: black;        /*color de la fuente*/
+            margin: 0;
+            /*margin: 100px 150px 70px 30px;*/          /*top right bottom left*/
+            /*text-transform: uppercase;*/ /*poner en minúscula o mayúscula*/
+            /*text-decoration: underline;*/ /*para subrayar, tachar, etc*/
+        }
+        h1 strong{
+            color: #8E0038; /*color de la letra del 'strong' */
+            font-size: 55px;
+        }
+        h1 strong1{
+            color: yellow; /*color de la letra del 'strong' */
+            font-size: 50px;
+        }
+        h1 strong2{
+            color: blue; /*color de la letra del 'strong' */
+            font-size: 50px;
+        }
+        h1 strong3{
+            color: red; /*color de la letra del 'strong' */
+            font-size: 50px;
+        }
+        h2{
+            color:#3F4045;
+            text-transform: uppercase;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: bold;
+            font-size: 35px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        h3{
+            color: black;
+            text-transform: uppercase;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .project-url a{
+            text-decoration: none;
+        }
+        .event-list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .event{
+            margin: 10px;
+            width: 1180px;
+            flex-shrink: 0;  /*r*/
+            border-radius: 10px;
+            overflow: hidden;
+            background: #8E0038;
+            border: 2px solid white;
+        }
+        .event img{
+            width: 1180px;
+            height: 300px;
+            object-fit: cover;
+        }
+        .event-detail{
+            margin: 20px 40px;;
+            margin-top: -40px;
+            background-color: #B5959F;
+            position: relative;
+            padding: 20px;
+            text-align: justify;
+        }
+        .event-description{
+            text-align: justify;
+        }
+        figure{
+            margin: 0;
+        }
+        .social-link {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin: 10px 10px;
+            background-size: 50px 50px;
+        }
+        .social-link.twitter {
+            background-image: url(./Iconos/twitter_g.png);
+        }
+        .social-link.facebook{
+            background-image: url(./Iconos/facebook_g.png);
+        }
+        .social-link.instagram{
+            background-image: url(./Iconos/instagram_g.png);
+        }
+        .social-link.youtube{
+            background-image: url(./Iconos/youtube_g.png);
+        }
+        .footer{
+            color: white;
+            background-color: #8E0038;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer img{
+            vertical-align: middle;
+        }
+
+        .footer a{
+            color: white;
+        }
+        .footer p {
+            padding: 0 20px;
+        }
+        .contact{
+            background-color: #8E0038;
+            color: white;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 15px;
+        }
+        .form-email input{
+            border-color: #50B6F5;
+            border-style: solid;
+            border-radius: 5px;
+            padding: 10px 20px 10px 25px;
+            background-image: url('../Proyecto_web_Tomorrowland/Imágenes/correo.jfif');
+            background-size: 17px 15px;
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-position-x: 5px;
+        }
+        .form-email button{
+            margin-top: 10px;
+            background: transparent;
+            color: white;
+            padding: 10px 0;
+            border-radius: 5px;
+            width: 100px;
+            margin-top: 10px;
+            /*margin: 10px auto;*/
+        }
+        .form-email h3{
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <figure class="logo">
+                <img src="C:\Users\Usuario\Dropbox\Proyecto_web_Tomorrowland\Imágenes\tom_logo.png" height="50" alt="Tomorrowland"/>
+            </figure>
+            <nav class="menu">
+                <ol>
+                     <li>
+                        <a class="link" href="#Inicio">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#Guia">Guía</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#Galeria">Galería fotográfica</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#Videos">Videos</a>
+                    </li>
+                    <li>
+                        <a class="link" href="#Contacto">Contacto</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>
+                <strong>Guía Tomorrowland</strong> <br/>desde <strong1>Colo</strong1><strong2>mb</strong2><strong3>ia</strong3>
+            </h1>
+            <!--<img class="hero-image" src="../Proyecto_web_Tomorrowland/Imágenes/Principal.jpg" width="260" height="300" alt="Principal">-->
+        </div>
+    </section>
+    <section id="Inicio1" class="Introduction">
+        <div class="container">
+            <h2>Introducción</h2>
+            <!--<article class="project">
+                <div class="project-details">
+                    <p class="project-url"><small><strong>Ir</strong> <a href="https://www.tomorrowland.com/global/" target="_blank">Sitio web oficial Tomorrowland</small></a></p>
+                    <p>Tomorrowland es el festival de música electrónica más grande del mundo, el cual se celebra en
+                        Boom, Bélgica, desde el año 2004 de manera ininterrumpida. Sobre sus escenarios pasan los 
+                        mejores DJ's del mundo</p>
+                </div>
+            </article>-->
+        </div>
+    </section>
+    <section id="Inicio" class=event-list>
+        <div class="container">
+            <article class="event">
+                <figure class="event-imageContainer">
+                    <img class="event-image" src="../Proyecto_web_Tomorrowland/Imágenes/Entrada_m.jpg" width="500"/>
+                </figure> 
+                <div class="event-detail">                   
+                    <p class="event-description">Tomorrowland es el festival de música electrónica más importante y popular del mundo, que se celebra cada verano en el parque 'De Schorre' ubicado en Boom, Bélgica. Tiene las presentaciones de los DJ más importantes, como: Tiësto, Martin Garrix, Armin van Buuren, David Guetta, etc. Tomorrowland comenzó en 2005 y desde entonces ha sido el festival de música más grande y notable del mundo.</p> <p>Actualmente, se extiende durante dos fines de semana y generalmente las entradas se agotan en pocos minutos.
+                            La primera edición de este festival fue en agosto de 2005 con la asistencia de casi diez mil personas y su duración fue de un día. Como en un caso curioso, la gente tuvo que acampar frente al escenario. Para el año 2011, la demanda de boletos fue mucho más alta que años atrás, en donde todos los 180,000 tiquetes se agotaron en menos de un día.</p> <p> Después de ganar por primera vez en el 2012 el "Premio Internacional de Música Dance" por el mejor evento musical, Tomorrowland se había convertido oficialmente 
+                            en el festival más global del mundo; en este mismo año lanzó su propio canal, con más de ocho millones de personas sintonizando, poco después se convirtió rápida y fácilmente en el festival de música más visto en el planeta.
+                            Después de eso, la edición del 2018 tuvo una asistencia de 400,000 personas durante los dos fines de semana, en la cual las entradas para el festival se agotaron rápidamente. El tema de la edición 2018 fue "La historia de Planaxis", donde hubo muchos homenajes de Avicii para conmemorar la muerte del DJ sueco tres meses antes del festival.</p>
+                            <p>En cuanto al tipo de música, el EDM es el subgénero más tocado durante el festival, aunque en otros escenarios se puede escuchar techno, trance, Drumm & Bass, entre otros. El DJ con más presentaciones ha sido David Guetta, quien ha estado presente desde el comienzo del festival. Otros artistas que se han presentado más de una vez, han sido: Tiësto, Martin Garrix, 
+                            Robin Schulz, Carl Cox, Hardwell, Dimitri Vegas y Like Mike.
+                            Finalmente, este festival es uno de los más populares en todo el mundo debido a la magia en cada rincón debido a su fantástico entorno, música y gente de todo el mundo. Además, todos deberían visitarlo al menos una vez en sus vidas.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section id="Contacto" class="contact">
+        <div class="container">
+            <form action="/Contacto/" class="form-email">
+                    <h3 class="event-list-title-1">Contacto</h3>
+                    <!--<p><small><strong>Ciudad de residencia: </strong>Bogotá D.C., Colombia</small></small></p>-->
+                    <p><small><strong>Correo electrónico: </strong>camiloge_91@hotmail.com</small></small></p>
+                    <p><small><strong>Número celular: </strong>-----</small></small></p>
+                    <!--<label for="e-mail">Contacto</label>-->
+                    <!--<input type="text" placeholder="Déjanos tu e-mail" id="e-mail">-->
+                    <!--<input type="submit" value="Button text">-->
+                    <!--<button>Enviar</button>-->
+                </form>
+            <div class="social">
+                    <a href="https://twitter.com/camiloguzman_91" class="social-link twitter" target="_blank"></a>
+                    <a href="https://www.facebook.com/Camilo.Guzman91" class="social-link facebook" target="_blank"></a>
+                    <a href="https://www.instagram.com/camiloguzman_91/" class="social-link instagram" target="_blank"></a>
+                    <a href="https://www.youtube.com/channel/UCVsWK0bZ2ya6eAK7LjBtDQg?view_as=subscriber" class="social-link youtube" target="_blank"></a>
+                </div>
+         </div>
+    </section>        
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <p>
+                    Destino Tomorrowland. 2020 <img src="C:\Users\Usuario\Dropbox\Proyecto_web_Tomorrowland\Imágenes\tom_logo_n.png" width="25" alt="Logo">
+                </p>
+                </div>
+                <div>
+                <p>
+                    Designed by <a href="https://twitter.com/camiloguzman_91" target="_blank">@camiloguzman_91</a>
+                </p>
+            </div>            
+        </div>
+    </footer>
+</body>
+</html>

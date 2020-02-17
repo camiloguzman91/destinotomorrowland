@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instagram</title>
+    <style>
+        .header{
+    color: black;
+    display: flex;
+    height: 70px;
+    bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+/*font-weight  poner texto en negrilla*/
+ol,
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure{
+    margin: 0;
+}
+.header a{
+    color: black;
+    text-decoration: none; /*quitar el subrayado del enlace*/
+}
+
+.header ol{
+    display: flex;
+}
+.header a{
+    padding: 0 10px;
+}
+.flexbox{
+    display: flex;
+    /*flex-wrap: nowrap;*/ /*ningún elemento caiga*/
+    flex-wrap: wrap;  /*los elementos caen para caber a lo ancho de la página*/
+    /*flex-direction: column;*/
+}
+.container{
+    /*border: 1px solid red;*/
+    width: 900px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
+        header{
+        background: #B5959F;
+        }
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+        .post-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(100px, 293px));
+            justify-content: center;
+            grid-gap: 28px;
+        }
+        .post {
+            cursor: pointer;   /*hace que salga la mano y no la flecha en el cursor*/
+            position: relative;
+            display: block;
+        }
+        .post-image{
+            margin: 0;
+        }
+        .post-image img {
+            width: 100%;
+            vertical-align: top;      /*margen*/
+        }
+        .post-overlay {
+            background: rgba (0,0,0,0.4);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .post:hover .post-overlay {
+            display: flex;
+        }
+        .post-likes,
+        .post-comments {
+            width: 80px;
+            margin: 5px;
+            font-weight: bold;
+            text-align: center;
+            display: inline-block;
+        }
+        @media screen and (max-width: 735px) {
+            .post-list {
+                grid-gap: 3px;
+            }
+        }
+    </style>
+</head>
+<body>
+            <header class="header">
+            <div class="container"> 
+                <figure class="logo">
+                    <img src="../Instagram/Imágenes/Logo.png" height="83" alt="Propiedad de Camilo Guzmán"/>
+                </figure>
+                   <nav class="menu">
+                           <ol>
+                               <li>
+                                   <a class="link" href="#Portafolio">Inicio</a>
+                               </li>
+                                                <li>
+                                   <a class="link" href="#Experiencia">Festival 2018</a>
+                               </li>
+                                                <li>
+                                   <a class="link" href="#Trabajemos_juntos">Contacto</a>
+                               </li>
+                           </ol>
+                       </nav>
+            </div>
+        </header>
+    <section class="post-list">
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../Instagram/Imágenes/a.jpg" alt="">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../Instagram/Imágenes/b.jpg" alt="">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../Instagram/Imágenes/c.jpg" alt="">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+                <a href="" class="post">
+            <figure class="post-image">
+                <img src="../Instagram/Imágenes/d.jpg" alt="">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../Instagram/Imágenes/e.jpg" alt="">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+        <a href="" class="post">
+            <figure class="post-image">
+                <img src="../Instagram/Imágenes/f.jpg" alt="">
+            </figure>
+            <span class="post-overlay">
+                <p>
+                    <span class="post-likes">150</span>
+                    <span class="post-comments">10</span>
+                </p>
+            </span>
+        </a>
+    </section>
+</body>
+</html>
